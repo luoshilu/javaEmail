@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>首页</title>
+<meta charset="UTF-8">
+
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css'/>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<script src="js/jquery.min.js"></script>
+</head>
+<body>
+<!--header starts-->
+	 <div class="container">
+	     <div class="top-header">
+			 <div class="logo">
+				 	<a href="index.html"><img src="images/logo.png" alt="" /></a>
+			 </div>
+			 <div class="top-menu">
+				<!-- <span class="menu"> 隐藏</span> -->
+				<ul>
+					  <li class="active"><span class="pic1"></span><a href="index.html">首页</a></li>
+					 <li><span class="pic2"></span><a href="inbox.jsp">收件箱</a></li>
+					 <li><span class="pic3"></span><a href="outbox.html">发件箱</a></li>
+					 <li><span class="pic4"></span><a href="write.html">写信</a></li>
+						<div class="clearfix"></div>
+				 </ul>
+				  <!--script-nav-->
+				 <script>
+				/* $("span.menu").click(function(){
+					 $(".top-menu ul").slideToggle("slow" , function(){
+					 });
+				 });*/
+				 </script>
+				 <!--script-nav-->
+			 </div>
+			 <div class="clearfix"></div>
+		  </div>
+	      <div class="header-banner">
+		     <script src="js/responsiveslides.min.js"></script>
+		     <script>
+			 $(function () {
+			  $("#slider").responsiveSlides({
+				auto: true,
+				nav: true,
+				speed: 500,
+				namespace: "callbacks",
+				pager: true,
+			  });
+			 });
+			 </script>
+			  <div class="container2">
+				 <div class="slider">
+				     <div class="callbacks_container">
+						 <ul class="rslides" id="slider">
+						 <li>
+							<div class="sale-box">
+							<span class="on_sale title_shop">NEW</span>
+							</div>
+						  <img src="images/bnr1.jpg" alt="">
+						  <div class="caption">
+							<p>Aenean iaculis, tortor sit amet molestie fringilla, sapien elit interdum mauris, sed cursus dui felis nec nisi. Nam vitae efficitur.</p>	          	
+						  </div>
+						   </li>
+						 <li>
+						 <div class="sale-box">
+							<span class="on_sale title_shop">NEW</span>
+							</div>
+						  <img src="images/bnr2.jpg" alt="">
+							 <div class="caption">
+							<p>Aenean iaculis, tortor sit amet molestie fringilla, sapien elit interdum mauris, sed cursus dui felis nec nisi. Nam vitae efficitur.</p>	
+							 </div>
+						 </li>
+						 <li>
+						 <div class="sale-box">
+							<span class="on_sale title_shop">NEW</span>
+							</div>
+						  <img src="images/bnr3.jpg" alt="">
+						  <div class="caption">	
+						   <p>Aenean iaculis, tortor sit amet molestie fringilla, sapien elit interdum mauris, sed cursus dui felis nec nisi. Nam vitae efficitur.
+						   </p>		          	
+						  </div>
+						 </li>
+						  </ul>
+							</div>
+					 </div>
+			     </div>	
+			 </div>	
+</div>
+<!--header ends-->
+<div class="container">
+	 <div class="banner-content">
+	 <p><span>Mmial邮件系统 </span>是一个轻量级IMAP客户端，基于Javamail API与Open-jACOB框架开发。界面类似于Gmail，它提供的功能包括完整的folder list,message list和contact list</p>
+	 </div>
+</div>
+<!--content-->
+<div class="content">
+	 <div class="container">
+	 <div class="col-md-5 contact-img">
+	 <img src="images/contact.jpg" alt=""/>
+	 </div>
+	 <div class="col-md-7 contact-info">
+	 <h3>功能介绍</h3>
+	 <p>是一套支持POP3/IMAP协议的webmail系统。它还提供了用于PDA设备的主题。OlivaMail/Webmail基于OlivaMail/Core类库开发。支持MIME邮件, 支持多国语言(包括中文)，支持codepage，支持SMTP身份验证，支持多个附件发送。采用MySQL来存储用户通 </p>
+		<a href="#">Read more<span></span></a>
+	 </div>
+	 <div class="clearfix"></div>
+	 </div>
+</div>
+<!--content/-->
+<div class="featured">
+	 <div class="container">
+		 <h3><span>现在 </span>开始进行功能演示</h3>
+		 <div class="line"></div>
+			<div class="clearfix"></div>
+	 </div>
+</div>
+<!---->
+<div class="brands">
+	 <div class="container">
+	 <div class="clearfix"></div>
+	 </div>
+</div>
+<!---->
+<div class="fotter">
+	 <div class="container">
+		 <p class="copyright">2016 - 05 - 30</p>
+		 <div class="social-icons">
+		 <a href="#"><span class="facebook"> </span></a>
+		 <a href="#"><span class="twitter"> </span></a>
+		 </div>
+		 <div class="clearfix"></div>
+	 </div>
+</div>
+<!---->
+</body>
+</html>
