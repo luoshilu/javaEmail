@@ -41,10 +41,12 @@ public class sendServlet extends HttpServlet {
 		String setname = request.getParameter("setname");
 		String subject = request.getParameter("subject");
 		String messages = request.getParameter("message");
+		String filepath = request.getParameter("filepath");
 		System.out.print(setname+subject+messages);
+		System.out.print("filepath:"+filepath);
 		try{
 			sendEmail sde = new sendEmail();
-			if(sde.send(from, password, setname, subject, messages))
+			if(sde.send(from, password, setname, subject, messages,filepath))
 			{
 			  out.write("true");
 			}else{

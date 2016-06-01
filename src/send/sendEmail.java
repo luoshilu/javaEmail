@@ -17,7 +17,8 @@ import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
 public class sendEmail {
-	 public boolean send (String from, String password, String setname, String subject, String messages) {
+	 public boolean send (String from, String password, 
+			 String setname, String subject, String messages,String filepath) {
 		
         try{
             Properties props=new Properties();
@@ -70,14 +71,14 @@ public class sendEmail {
             mtp.addBodyPart(mdp);
                                 
             //设置信件的附件(用本地机上的文件作为附件)
-//            mdp=new MimeBodyPart();
-//            FileDataSource fds=new FileDataSource("/home/tenlee/图片/head.jpg");
-//            DataHandler dh=new DataHandler(fds);
-//            mdp.setFileName("head.jpg");//可以和原文件名不一致
-//            mdp.setDataHandler(dh);
-//            mtp.addBodyPart(mdp);
-//            //把mtp作为消息对象的内容
-            msg.setContent(mtp);
+           mdp=new MimeBodyPart();
+            FileDataSource fds=new FileDataSource(filepath);
+            DataHandler dh=new DataHandler(fds);
+            mdp.setFileName("emailfile");//可以和原文件名不一致
+            mdp.setDataHandler(dh);
+            mtp.addBodyPart(mdp);
+            //把mtp作为消息对象的内容
+           msg.setContent(mtp);
                                 
             //以上为发送带附件的方式
             //先进行存储邮件

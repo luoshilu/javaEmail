@@ -62,29 +62,28 @@ try {
 								<div class="col-md-9 services-left">
 									
 								<div id="look">
-									<table style="float:right">
+									<table>
 										<tr>
-											<td><button  id="back" type="button" class="close" aria-label="Close"><span aria-hidden="true">关闭&times;</span></button></td>
-											<!-- <td><input calss="btn btn-default" id="back" type="submit" value="返回"> </td> -->
-											<!-- <td><input calss="btn btn-success" id="rec" type="submit" value="回复"></td> -->
+											<td><input id="back" type="submit" value="返回"> </td>
+											<td><input type="submit" value="回复"></td>
 										</tr>
 									</table>
-									<p class="text-muted">发件人:</p>
-									<p class="text-info" id="from"></p>
-									<p class="text-muted">主题:</p>
-									<p class="text-info" id="sub"></p>
-									<p class="text-muted">时间:</p>
-									<p class="text-info"id="time"></p>
-									<p class="text-muted">内容:</p>
-									<p class="text-info" id="msg"></p>
+									<p>发件人:</p>
+									<p id="from"></p>
+									<p>主题:</p>
+									<p id="sub"></p>
+									<p>时间:</p>
+									<p id="time"></p>
+									<p>内容:</p>
+									<p id="msg"></p>
 								</div>
 								<div id="select">
 									<table>
 										<tr>
-											<td><input class="btn btn-default" type="submit" value="全选"></td>
-											<td><input class="btn btn-default" type="submit" value="转发"></td>
-											<td><input class="btn btn-default" type="submit" value="回复"></td>
-											<td><input class="btn btn-default" type="submit" value="删除"></td>
+											<td><input type="submit" value="全选"></td>
+											<td><input type="submit" value="转发"></td>
+											<td><input type="submit" value="回复"></td>
+											<td><input type="submit" value="删除"></td>
 										</tr>
 									</table>
 								</div>
@@ -115,16 +114,20 @@ try {
 
 										<%for(int floor=alllist.size();floor>0;floor--){
 										%>
-										<div class="col-md-9 services-left-grid">
-											<h3><input calss="checkbox" type="checkbox">
-											<%=(alllist.get(floor-1).getFrom().replace('<','|')).replace('>',' ')%>
-											</h3>
-											<p><%=alllist.get(floor-1).getSubject()%></p>
-											<p><%=alllist.get(floor-1).getTime()%></p>
-											
-											<a id="<%=alllist.get(floor-1).getNumber()%>" class="more-btn">详情</a>
-											<mes id="mes"><%=alllist.get(floor-1).getText()%></mes>
-										</div>
+										<ul>
+											<li id="<%=alllist.get(floor-1).getNumber()%>">
+												div class="col-md-9 services-left-grid">
+													<h3><input calss="checkbox" type="checkbox">
+													<%=(alllist.get(floor-1).getFrom().replace('<','|')).replace('>',' ')%>
+													</h3>
+													<span><%=alllist.get(floor-1).getSubject()%></span>
+													<span><%=alllist.get(floor-1).getTime()%></span>
+													
+													<a class="more-btn">详情</a>
+													<mes id="mes"><%=alllist.get(floor-1).getText()%></mes>
+												</div>
+											</li>
+										</ul>
 										<%}%>
 										
 										<div class="clearfix"> </div>
@@ -135,39 +138,16 @@ try {
 										</ul>
 									</div>
 								</div>
-								<div style="position:fixed;left:75%" class="col-md-3 services-right">
+								<div class="col-md-3 services-right">
 									<h3>时间轴</h3>
-									<ul id="tms">
-										<li><a href="#"><span id="t1"> </span>今天</a></li>
-										<li><a href="#"><span id="t2"> </span>昨天</a></li>
-										<li><a href="#"><span id="t3"> </span>星期三</a></li>
-										<li><a href="#"><span id="t4"> </span>星期二</a></li>
-										<li><a href="#"><span id="t5"> </span>星期一</a></li>
-										<li><a href="#"><span id="t6"> </span>上一周</a></li>
-										<li><a href="#"><span id="t7"> </span>更早</a></li>
+									<ul>
+										<li><a href="#"><span> </span>今天</a></li>
+										<li><a href="#"><span> </span>昨天</a></li>
+										<li><a href="#"><span> </span>星期X</a></li>
+										<li><a href="#"><span> </span>上一周</a></li>
+										<li><a href="#"><span> </span>更早</a></li>
 									</ul>
 								</div>
-								<script>
-								$("#t1").css({"background":"url(images/arrow.png) no-repeat 0px 0px"});
-								var t=1;
-								var myscroll=0;
-								$("window").scroll(function(){
-									var height=$("window").height();
-									var num=Math.abs(height-myscroll);
-									if(num>200){
-										$("#t"+t).css({"background":""});//清除背景图片图片
-										/*if((height-myscroll)>0{
-										t++;
-										$("#t"+t).css({"background":"url(images/arrow.png) no-repeat 0px 0px"});//滚动条下滑，给下面的元素添加背景图片
-										myscroll=$("window").height();
-									}else{
-										t--;
-										$("#t"+t).css({"background":"url(images/arrow.png) no-repeat 0px 0px"});
-										myscroll=$("window").height();
-									}*/
-									}
-								});
-								</script>
 								<div class="clearfix"> </div>
 							</div>
 						</div>

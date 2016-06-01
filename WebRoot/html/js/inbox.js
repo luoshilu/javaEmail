@@ -9,6 +9,7 @@ $("document").ready(function(){
 	    $(".services-left-grids").css({"display":"none"});
 	    /*$(".services-left-grids").fadeIn();*/
 	    $("#look").css({"display":"block"});
+	    $("#select").css({"display":"none"});
 	    /*$("#look").fadeOut();*/
 	    var msg=$("#"+id).next().html();//内容
 	    var time=$("#"+id).prev().html();//时间
@@ -28,6 +29,7 @@ $("document").ready(function(){
 		    $(".services-left-grids").css({"display":"block"});//打开邮件列表
 		   /* $(".services-left-grids").fadeOut();*/
 		    $("#look").css({"display":"none"});//关闭某一封邮件
+		    $("#select").css({"display":"block"});
 	    });
 	});
 });

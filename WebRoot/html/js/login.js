@@ -9,11 +9,10 @@ $("document").ready(function(){
 	});
 
 	$("#submit").click(function(){
-		
 		if(mail==""||password==""){
 			alert("请输入用户名和密码");
 		}else{
-			$("#ts").html("登录中,请稍后...");
+			$("#ts").text("登录中,请稍后...");
 			if (window.XMLHttpRequest)
 			  {
 			  xmlhttp=new XMLHttpRequest();

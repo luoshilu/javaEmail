@@ -33,13 +33,13 @@ public class receiveEmaillist {
 	public receiveEmaillist(){
 		
 	}
-	public static void main(String[] args) throws Exception{
+	/*public static void main(String[] args) throws Exception{
 		
 		receiveEmaillist rel = new receiveEmaillist();
 		List<EmailObject> alllist = new ArrayList<EmailObject>(); 
 		alllist = rel.Emaillist("rlovezt@sina.com","982812162");
 		System.out.println(alllist.get(1).getText());
-	}
+	}*/
 	public List Emaillist(String username,String password)
 			throws Exception {
 		 Properties props = new Properties();  

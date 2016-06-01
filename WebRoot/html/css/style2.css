@@ -7,12 +7,6 @@
 #look p{
 	margin-top:0.5em;
 }
-#look{
-	padding: 0.5px solid gray;
-}
-#select{
-	margin-bottom:1em; 
-}
 html, body{
   	font-family: 'Segoe UI', sans-serif;
     font-size: 100%;
@@ -539,6 +533,12 @@ margin-top: 2em;
 	margin: 0.5em 0 0.8em 0;
 	width: 94%;
 }
+.services-left-grid ul li{
+color:#777;
+padding:0.5em 0;
+text-decoration:none;
+border-bottom:1px dashed #B9B9B9;
+}
 a.more-btn{
 	border: 2px solid #797979;
 	text-transform: uppercase;
@@ -579,7 +579,6 @@ ul.pagenation li a:hover{
 }
 .services-right ul li{
 	display:block;
-	margin-top: 0.2em;
 }
 .services-right ul li a{
 	color:#777;
@@ -594,12 +593,12 @@ ul.pagenation li a:hover{
 	width:8px;
 	height:8px;
 	display:inline-block;
-	/* background:url(../images/arrow.png) no-repeat 0px 0px; */
+	background:url(../images/arrow.png) no-repeat 0px 0px;
 	margin-right:0.4em;
 }
 .services-right h3{
 	font-weight: 700;
-	text-transform: uppercase;
+	text-transform: lowercase;
 	color: #0b0b0d;
 	margin:3em 0 0.5em 0;
 	font-size: 1.3em;
@@ -872,6 +871,12 @@ padding: 2em 0;
 width: 50%;
 float: left;
 }
+.services-left-grid ul li{
+color:#777;
+padding:0.5em 0;
+text-decoration:none;
+border-bottom:1px dashed #B9B9B9;
+}
 .services-right ul li {
 width: 34%;
 }
@@ -1079,6 +1084,11 @@ font-size: 0.8em;
 width: 86%;
 margin:0;
 }
+.services-left-grid span {
+font-size: 0.8em;
+width: 86%;
+margin:0;
+}
 a.more-btn {
 padding: 0.2em 1em;
 font-size: 0.75em;
@@ -1220,9 +1230,15 @@ padding: 1em 0;
 margin-top: 1em;
 }
 .services-left-grid h3 {
+text-transform: lowercase;
 font-size: 0.8em;
 }
 .services-left-grid p {
+font-size: 0.8em;
+width: 100%;
+line-height:1.5em;
+}
+.services-left-grid span {
 font-size: 0.8em;
 width: 100%;
 line-height:1.5em;
