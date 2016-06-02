@@ -18,7 +18,7 @@ import javax.mail.internet.MimeMultipart;
 
 public class sendEmail {
 	 public boolean send (String from, String password, 
-			 String setname, String subject, String messages,String filepath) {
+			 String setname, String subject, String messages,String filename) {
 		
         try{
             Properties props=new Properties();
@@ -72,9 +72,9 @@ public class sendEmail {
                                 
             //设置信件的附件(用本地机上的文件作为附件)
            mdp=new MimeBodyPart();
-            FileDataSource fds=new FileDataSource(filepath);
+            FileDataSource fds=new FileDataSource(filename);
             DataHandler dh=new DataHandler(fds);
-            mdp.setFileName("emailfile");//可以和原文件名不一致
+           // mdp.setFileName("emailfile");//可以和原文件名不一致
             mdp.setDataHandler(dh);
             mtp.addBodyPart(mdp);
             //把mtp作为消息对象的内容

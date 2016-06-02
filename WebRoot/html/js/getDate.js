@@ -28,3 +28,5 @@ $("document").ready(function(){
 	xmlhttp.open("GET","servlet/getSession",false);
     xmlhttp.send();
 });
+$("#exit").click(function(){
+});

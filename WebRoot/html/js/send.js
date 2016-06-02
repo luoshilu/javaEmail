@@ -12,11 +12,11 @@ $("document").ready(function(){
 	$("#con").blur(function(){
 		con=this.value;
 	});
-	$("#file").change(function(){
+	/*$("#file").change(function(){
 		alert(this.value);
 		tt=this.value;
 		alert("tt"+tt);
-	/*	alert(getPath(this));*/
+		alert(getPath(this));*/
 	//tt=getPath(this);
 		//附带不用修改浏览器安全配置的javascript代码，兼容ie， firefox全系列
 
@@ -43,8 +43,8 @@ $("document").ready(function(){
 	      }  
 	    return obj.value;  
 	    }
-	 } */
-});
+	 }
+}); */
 //参数obj为input file对象
 /*var tt = document.getElementById("send");  
 tt.select();  
@@ -59,7 +59,7 @@ var realpath = document.selection.createRange().text;*/
 		$.ajax({
 			type:"POST",
 			url:"servlet/sendServlet?",
-			data:"setname="+set+"&subject="+sub+"&message="+con+"&filepath="+tt,
+			data:"setname="+set+"&subject="+sub+"&message="+con,
 			dateType:"text",
 			success: function(date){
 				if(date=="true")

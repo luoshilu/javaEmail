@@ -81,10 +81,10 @@ try {
 								<div id="select">
 									<table>
 										<tr>
-											<td><input class="btn btn-default" type="submit" value="全选"></td>
-											<td><input class="btn btn-default" type="submit" value="转发"></td>
-											<td><input class="btn btn-default" type="submit" value="回复"></td>
-											<td><input class="btn btn-default" type="submit" value="删除"></td>
+											<td><input class="btn btn-default btn-sm" type="submit" value="全选"></td>
+											<td><input class="btn btn-default btn-sm" disabled="disabled" type="submit" value="转发"></td>
+											<td><input class="btn btn-default btn-sm" disabled="disabled" type="submit" value="回复"></td>
+											<td><input class="btn btn-default btn-sm" disabled="disabled" type="submit" value="删除"></td>
 										</tr>
 									</table>
 								</div>
@@ -116,10 +116,10 @@ try {
 										<%for(int floor=alllist.size();floor>0;floor--){
 										%>
 										<div class="col-md-9 services-left-grid">
-											<h3><input calss="checkbox" type="checkbox">
+											<p><input calss="checkbox" type="checkbox">
 											<%=(alllist.get(floor-1).getFrom().replace('<','|')).replace('>',' ')%>
-											</h3>
-											<p><%=alllist.get(floor-1).getSubject()%></p>
+											</p>
+											<h3><%=alllist.get(floor-1).getSubject()%></h3>
 											<p><%=alllist.get(floor-1).getTime()%></p>
 											
 											<a id="<%=alllist.get(floor-1).getNumber()%>" class="more-btn">详情</a>
@@ -128,14 +128,14 @@ try {
 										<%}%>
 										
 										<div class="clearfix"> </div>
-										<ul class="pagenation">
+										<!-- <ul class="pagenation">
 											<li><a href="#">1</a></li>
 											<li><a href="#">2</a></li>
 											<li><a href="#">3</a></li>
-										</ul>
+										</ul> -->
 									</div>
 								</div>
-								<div style="position:fixed;left:75%" class="col-md-3 services-right">
+								<div id="sjz" class="col-md-3 services-right">
 									<h3>时间轴</h3>
 									<ul id="tms">
 										<li><a href="#"><span id="t1"> </span>今天</a></li>
@@ -147,27 +147,7 @@ try {
 										<li><a href="#"><span id="t7"> </span>更早</a></li>
 									</ul>
 								</div>
-								<script>
-								$("#t1").css({"background":"url(images/arrow.png) no-repeat 0px 0px"});
-								var t=1;
-								var myscroll=0;
-								$("window").scroll(function(){
-									var height=$("window").height();
-									var num=Math.abs(height-myscroll);
-									if(num>200){
-										$("#t"+t).css({"background":""});//清除背景图片图片
-										/*if((height-myscroll)>0{
-										t++;
-										$("#t"+t).css({"background":"url(images/arrow.png) no-repeat 0px 0px"});//滚动条下滑，给下面的元素添加背景图片
-										myscroll=$("window").height();
-									}else{
-										t--;
-										$("#t"+t).css({"background":"url(images/arrow.png) no-repeat 0px 0px"});
-										myscroll=$("window").height();
-									}*/
-									}
-								});
-								</script>
+								
 								<div class="clearfix"> </div>
 							</div>
 						</div>

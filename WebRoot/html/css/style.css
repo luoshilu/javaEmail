@@ -13,6 +13,10 @@
 #select{
 	margin-bottom:1em; 
 }
+#sjz{
+	position: absolute;
+	left: 65%;
+}
 html, body{
   	font-family: 'Segoe UI', sans-serif;
     font-size: 100%;

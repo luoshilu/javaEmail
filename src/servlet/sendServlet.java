@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import send.sendEmail;
 
@@ -33,7 +34,7 @@ public class sendServlet extends HttpServlet {
 	}
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
+		HttpSession session=request.getSession();
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		String from = (String) request.getSession().getAttribute("username");
@@ -41,12 +42,14 @@ public class sendServlet extends HttpServlet {
 		String setname = request.getParameter("setname");
 		String subject = request.getParameter("subject");
 		String messages = request.getParameter("message");
-		String filepath = request.getParameter("filepath");
-		System.out.print(setname+subject+messages);
-		System.out.print("filepath:"+filepath);
+		//String filename = request.getParameter("filename");
+		String path = (String) session.getAttribute("path");
+		System.out.print("path:"+path);
+		System.out.print("hhh:"+setname+subject+messages);
+		//System.out.print("filepath:"+filename);
 		try{
 			sendEmail sde = new sendEmail();
-			if(sde.send(from, password, setname, subject, messages,filepath))
+			if(sde.send(from, password, setname, subject, messages,path))
 			{
 			  out.write("true");
 			}else{

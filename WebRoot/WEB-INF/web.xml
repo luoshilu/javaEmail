@@ -40,6 +40,31 @@
     <servlet-name>getSession</servlet-name>
     <servlet-class>servlet.getSession</servlet-class>
   </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>exit</servlet-name>
+    <servlet-class>servlet.exit</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>sendfileServlet</servlet-name>
+    <servlet-class>servlet.sendfileServlet</servlet-class>
+    <init-param> 
+     	<param-name>filepath</param-name> 
+        <param-value>WEB-INF/upload</param-value> 
+    </init-param> 
+     <init-param> 
+        <param-name>temppath</param-name> 
+        <param-value>WEB-INF/tmp</param-value> 
+     </init-param> 
+    
+  </servlet>
+
+
+
+
 
   <servlet-mapping>
     <servlet-name>indexServlet</servlet-name>
@@ -52,7 +77,16 @@
   <servlet-mapping>
     <servlet-name>getSession</servlet-name>
     <url-pattern>/html/servlet/getSession</url-pattern>
-  </servlet-mapping>	
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>exit</servlet-name>
+    <url-pattern>/html/servlet/exit</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>sendfileServlet</servlet-name>
+    <url-pattern>/html/servelt/sendfileServlet</url-pattern>
+  </servlet-mapping>
+	
   <welcome-file-list>
     <welcome-file>html/login.html</welcome-file>
   </welcome-file-list>
